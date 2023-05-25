@@ -1,8 +1,8 @@
 grammar ParserT;
 import LexerT;
 
-program   : BEGIN statement+ END;
+program   : TITULO statement+ FIN;
           
 statement : print ;
 
-print     : PRINT '('(PALABRA | NUMERO)')';
+print     : PRINT '('(PALABRA | NUMERO)+')';

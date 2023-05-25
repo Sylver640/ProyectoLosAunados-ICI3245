@@ -1,7 +1,7 @@
 lexer grammar LexerT;
 
-BEGIN: 'begin';
-END: 'end';
+TITULO: (PALABRA ' ')+ ', por ' (PALABRA ' ')+ '.';
+FIN: 'FIN';
 PRINT: 'print';
 
 NUMERO : [0-9]+ ;
