@@ -4,5 +4,9 @@ BEGIN: 'begin';
 END: 'end';
 PRINT: 'print';
 
-NUMBER : [0-9]+ ;
+PALABRA : (MINUSCULAS | MAYUSCULAS | NUMERO)+ ;
+MINUSCULAS : [a-z] ;
+MAYUSCULAS : [A-Z] ;
+NUMERO : [0-9]+ ;
+
 WS : [ \t\r\n]+ -> skip ;
