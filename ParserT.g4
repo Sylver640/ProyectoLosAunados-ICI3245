@@ -5,4 +5,4 @@ program   : BEGIN statement+ END;
           
 statement : print ;
 
-print     : PRINT '('PALABRA')';
+print     : PRINT '('(PALABRA | NUMERO)')';
