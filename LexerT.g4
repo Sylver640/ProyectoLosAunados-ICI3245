@@ -1,14 +1,19 @@
 lexer grammar LexerT;
 
-TITULO: 'title:';
+TITULO: 'Title:';
 ESCRITOR: 'by:';
-
 FIN: 'end-of-script' ;
-PRINT: 'print' ;
 
-NUMERO : [0-9]+ ;
+INPUT: 'write' ;
+PRINT: 'show' ;
+
 PALABRA : (MINUSCULAS | MAYUSCULAS) ;
 MINUSCULAS : [a-z]+ ;
 MAYUSCULAS : [A-Z]+ ;
+NUMERO : [0-9]+ ;
+
+COSENO : 'Dissolve to:';
+SENO : 'Smash cut to:';
+RAIZ : 'Flashback to:';
 
 WS : [ \t\r\n]+ -> skip ;
