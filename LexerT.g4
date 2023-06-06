@@ -7,13 +7,17 @@ FIN: 'end-of-script' ;
 INPUT: 'write' ;
 PRINT: 'show' ;
 
-PALABRA : (MINUSCULAS | MAYUSCULAS) ;
-MINUSCULAS : [a-z]+ ;
-MAYUSCULAS : [A-Z]+ ;
-NUMERO : [0-9]+ ;
-
 COSENO : 'Dissolve to:';
 SENO : 'Smash cut to:';
 RAIZ : 'Flashback to:';
+
+ELEMENTNAME : PALABRA;
+ORACION : PALABRA (' ' PALABRA)* ;
+
+PALABRA : (MINUSCULAS | MAYUSCULAS | SIMBOLO)+ ;
+MINUSCULAS : [a-z]+ ;
+MAYUSCULAS : [A-Z]+ ;
+NUMERO : [0-9]+ ;
+SIMBOLO : '?' | '!' | '-' | '~' ;
 
 WS : [ \t\r\n]+ -> skip ;
